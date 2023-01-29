@@ -1,35 +1,104 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
     <head>
         <title>Tiendita en linea</title>
         <meta charset="UTF-8">
-       
+        <meta name="description" content="pagina de la leccion 2"/>
+        <meta name="description" content="html5,css, web, fidelitas"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <!-- **Este apartado es el que estoy utilizando para poder crear mi tienda** -->
-        <div>
-            <h1 style = "text-align: center">Home</h1>
-            <p>Bienvenido Joel al curso de aplicaciones web y patrones.</p>
-        </div>
+        <header id="encabezado">
+            <h1>Tienda en linea</h1>
+            <br/>
+        </header>
+        <nav>
+            id="menu"
+            <a href="ejemplo9.html">Atras</a>
+            <a href="index.html">HOME</a>
+            <a href="ejemplo2.html">adelante</a>      
+        </nav>
 
-        <p>Era un pueblecito rayano, Ribamoura, vivero de contrabandistas, donde esta profesión de riesgo y lucro hacía a la gente menos dormida de lo que suelen ser los pueblerinos. Abundaban los mozos de cabeza caliente, y se desdeñaba al que no era capaz de coger una escopeta y salir a la ganancia.
+        <aside id="barraLateral">
+            <h2>Producto mas vendido</h2>
+            <p>Era un pueblecito rayano, Ribamoura, vivero de contrabandistas, donde esta profesión de riesgo y lucro hacía a la gente menos dormida</p>    
+        </aside>
 
-            Las mujeres, vestidas y adornadas con lo que da de sí el contrabando, lucían pendientes de ostentosa filigrana, patenas fastuosas, pañuelos de seda de colorines; en las casas no faltaba ron jamaiqueño ni queso de Flandes, y los hombres poseían armas inglesas, bolsas de piel y tabaco Virginia y Macuba. Al través de Portugal, Inglaterra enviaba sus productos, y de España pasaban otros, cruzando el caudaloso río.
 
-            Algunos días del año se interrumpía el tráfico y la industria de Ribamoura. El pueblo entero se congregaba a celebrar las solemnidades consuetudinarias, que servían de pretexto para solaces y holgorio. Tal ocurría con el Carnaval, tal con la fiesta de la Patrona, tal con los días de la Semana Santa. A pesar de ser éstos de penitencia y mortificación, para los de Ribamoura tenían carácter de fiesta; en ellos se celebraba, en la iglesia principal, espacioso edificio de la época herreriana, la representación de la Pasión, con personajes de carne y hueso, y encargándose de los papeles gente del pueblo mismo.
+        <section id="contenido">
+            <h2>Articulos mas vendidos</h2>
 
-            «Trabajaban» por devoción y por respeto tradicional a los misterios redentores; pero nunca hubiesen admitido a nadie mercenario, ni tolerado que hiciese los papeles nadie de mala reputación. Gente honrada, aunque contrabandease; que eso no deshonra. Ni por pecado lo daban en el confesionario los frailes.
-        </p>
-        <br/>
-        <p>Puede que la tarea que me he impuesto de escribir una historia completa del pueblo romano desde el comienzo mismo de su existencia me recompense por el trabajo invertido en ella, no lo sé con certeza, ni creo que pueda aventurarlo. Porque veo que esta es una práctica común y antiguamente establecida, cada nuevo escritor está siempre persuadido de que ni lograrán mayor certidumbre en las materias de su narración, ni superarán la rudeza de la antigüedad en la excelencia de su estilo. Aunque esto sea así, seguirá siendo una gran satisfacción para mí haber tenido mi parte también en investigar, hasta el máximo de mis capacidades, los anales de la nación más importante del mundo, con un interés más profundo; y si en tal conjunto de escritores mi propia reputación resulta ocultada, me consuelo con la fama y la grandeza de aquellos que eclipsen mi fama. El asunto, además, es uno que exige un inmenso trabajo. Se remonta a más de 700 años atrás y, después de un comienzo modesto y humilde, ha crecido a tal magnitud que empieza a ser abrumador por su grandeza. No me cabe duda, tampoco, que para la mayoría de mis lectores los primeros tiempos y los inmediatamente siguientes, tienen poco atractivo; Se apresurarán a estos tiempos modernos en los que el poderío de una nación principal es desgastado por el deterioro interno. Yo, en cambio, buscaré una mayor recompensa a mis trabajos en poder cerrar los ojos ante los males de que nuestra generación ha sido testigo durante tantos años; tanto tiempo, al menos, como estoy dedicando todo mi pensamiento a reproducir los claros registros, libre de toda la ansiedad que pueden perturbar el historiador de su época, aunque no le puedan deformar la verdad.
+            <article>
+                <header>Asus vivoBook</header>
+                <p>Era un pueblecito rayano, Ribamoura, vivero de contrabandistas, donde esta profesión de riesgo y lucro hacía a la gente menos dormida</p>
+                <figure>
+                    <img src="image/Equipo1.png" alt="Asus vivoBook" width="200"/>
+                    <figcaption>Imagen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            <!-- Se sepera para poder hacer los demas articulos 1 -->
+            <article>
+                <header>AlienWare</header>
+                <p>Era un pueblecito rayano, Ribamoura, vivero de contrabandistas, donde esta profesión de riesgo y lucro hacía a la gente menos dormida</p>
+                <figure>
+                    <img src="image/alienware.png" alt="AlienWare, portatil" width="200"/>
+                    <figcaption>Mas vendido</figcaption>
+                </figure>
+            </article>
+            <!-- Se sepera para poder hacer los demas articulos 2-->
+            <article>
+                <header>Impresora 3D</header>
+                <p>Era un pueblecito rayano, Ribamoura, vivero de contrabandistas, donde esta profesión de riesgo y lucro hacía a la gente menos dormida</p>
+                <figure>
+                    <img src="image/venado.png" alt="impresora 3D" width="200"/>
+                    <figcaption>Mas economico</figcaption>
+                </figure>
+            </article>
+            <!-- Se sepera para poder hacer los demas articulos 3-->
 
-        </p>
-        <br/>
-        <p>
-            La triste necesidad, que me ha tenido siempre con un pie sobre el cuello, me obliga a vender mis Memorias. Nadie puede hacerse una idea de cuánto he sufrido por tener que hipotecar mi tumba; pero me obligan a este postrer sacrificio mis juramentos y la coherencia de mi conducta. Por un apego acaso pusilánime, consideraba estas Memorias como confidentes de los que nunca hubiera querido separarme; mi intención era legárselas a madame de Chateaubriand; ella las daría a conocer según su voluntad, o las destruiría, lo que hoy desearía más que nunca.
-        </p>
-        <br/>
+            <br/>
+            <br/>
+            <br/>
+            <article>
+                <header>Lineas de productos</header>
+                <table border="0">
+                    <thead id="encabezadoTabla">
+                        <tr>
+                            <th>codigo</th>
+                            <th>Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen"/>
+                    <tr>
+                        <td>1</td>
+                        <td>Teclados</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>monitores</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>headsets</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Portatiles</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>perifericos </td>
+                    </tr>
+                </table>
+            </article>
+            
+            <br/>
+            <br/>
+            <br/>
+
+        </section>
+        <<footer id="piePagina">Derechos reservados &COPY; 2023 <address>Cartago, Agua caliente</address> <address>Tel: 11229900</address> </footer>
 
     </body>
 </html>
