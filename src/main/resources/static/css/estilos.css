@@ -4,8 +4,8 @@
     left: 0%;
     height: 8%;
     width: 100%;
-    background-color: #496D8D;
-    color: white;
+    background-color: #faf3fc;
+    color: black;
     padding-left: 15px; 
 }
 
@@ -33,7 +33,7 @@
     left: 0%;
     height: 81%;
     width: 20%;
-    background-color: #9B8030;
+    background-color: #f8da5b;
     color: black;
     padding-left: 15px; 
 }
@@ -43,7 +43,7 @@
     left: 20%;
     height: 81%;
     width: 80%;
-    background-color: #8fc6ff;
+    background-color: #c03546;
     color: black;
     padding-left: 15px; 
     overflow: auto;
@@ -55,7 +55,7 @@
     left: 0;
     height: 7%;
     width: 100%;
-    background-color: aquamarine;
+    background-color: #b074e9;
     color: black;
     padding-left: 15px; 
     text-align: center;
