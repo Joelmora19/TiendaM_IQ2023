@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!--   <div>Saludos desde MVC</div>
+        <p th:text="${Mensaje}"></p>
+        <br/>
+        <p>nombre <span th:text="${objetoCliente.nombre}"></span></p>
+        <p>apellidos <span th:text="${objetoCliente.apellidos}"></span></p>
+        <p>correo <span th:text="${objetoCliente.correo}"></span></p>
+        <p>telefono <span th:text="${objetoCliente.telefono}"></span></p> -->
+        
+        
+        <h1>Lista de clientes</h1>
+        <div th:if="${cliente != null and !cliente.empy}">
+            <table border="1">
+                <thead>
+                <th>Nombre</th>
+                <th>apellidos</th>
+                <th>Correo</th>
+                <th>Telefono</th>
+                </thead>
+                <tbody>
+                    <tr th:each="iteam : ${clientes}">
+                        <td th:text="${item.nombre}"></td>
+                        <td th:text="${item.apellido}"></td>
+                        <td th:text="${item.telefono}"></td>
+                        <td th:text="${item.correo}"></td>
+                        <td th:text="${item.idCliente}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div th:if="${cliente == null or cliente.empy}">
+            la lista de clientes esta vacia...
+        </div>
+
+    </body>
+</html>

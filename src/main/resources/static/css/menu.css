@@ -11,7 +11,7 @@ body{
 
 }
 .header{
-    background-color: #B22222;
+    background-color: #DAA520;
     height: 12%;
     top 0%;
     left: 0;
@@ -27,8 +27,8 @@ body{
 .nav-link{
     color: white;
     text-decoration: none;
-    
-    
+
+
 }
 .Logo{
     color: white;
