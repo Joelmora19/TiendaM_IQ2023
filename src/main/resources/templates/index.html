@@ -7,38 +7,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <!--   <div>Saludos desde MVC</div>
-        <p th:text="${Mensaje}"></p>
-        <br/>
-        <p>nombre <span th:text="${objetoCliente.nombre}"></span></p>
-        <p>apellidos <span th:text="${objetoCliente.apellidos}"></span></p>
-        <p>correo <span th:text="${objetoCliente.correo}"></span></p>
-        <p>telefono <span th:text="${objetoCliente.telefono}"></span></p> -->
-        
-        
+        <header th:replace="layout/plantilla :: header" />
         <h1>Lista de clientes</h1>
-        <div th:if="${cliente != null and !cliente.empy}">
+        <a th:href="@{/nuevoCliente}">Nuevo cliente</a>
+        <br>
+        <br/>
+        <div th:if="${clientes != null and !clientes.empty}">
             <table border="1">
                 <thead>
                 <th>Nombre</th>
                 <th>apellidos</th>
                 <th>Correo</th>
                 <th>Telefono</th>
+                <th colspan="2">Acciones</th>
                 </thead>
                 <tbody>
-                    <tr th:each="iteam : ${clientes}">
+                    <tr th:each="item : ${clientes}">
                         <td th:text="${item.nombre}"></td>
-                        <td th:text="${item.apellido}"></td>
+                        <td th:text="${item.apellidos}"></td>
                         <td th:text="${item.telefono}"></td>
                         <td th:text="${item.correo}"></td>
                         <td th:text="${item.idCliente}"></td>
+                        <td><a th:href="@{/modificarCliente/} + ${item.idCliente}">Modificar</a><td>
+                        <td><a th:href="@{/eliminarCliente/} + ${item.idCliente}">Eliminar</a><td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <div th:if="${cliente == null or cliente.empy}">
+        <div th:if="${clientes == null or clientes.empty}">
             la lista de clientes esta vacia...
         </div>
-
+        <footer th:replace="layout/plantilla :: footer"/>
     </body>
 </html>
