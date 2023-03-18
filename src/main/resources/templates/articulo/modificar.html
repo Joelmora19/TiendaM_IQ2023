@@ -15,24 +15,24 @@
             <form th:action="@{/articulo/guardar}"   
                   method="POST"     
                   th:object="${articulo}">    
-                <input type="hidden" name="idCategoria" th:field="*{idCategoria}"/>  
+                <input type="hidden" name="idArticulo" th:field="*{idArticulo}"/>  
                 <label for="nombre">Categoria:</label>
-                <br/>    
-                <input type="text" id="categoria" name="categoria" th:field="*{categoria}"/><br/>   
-                </selet><br/>   
-                <label for="descripcion">Descripcion:</label><br/>       
-                <input type="text" id="descripcion" name="descripcion" th:field="*{descripcion}"/><br/>   
-                <label for="detalle">Detalle:</label><br/>      
-                <input type="text" id="detalle" name="detalle" th:field="*{detalle}"/><br/>    
-                <label for="precio">Precio:</label><br/>     
-                <input type="number" id="precio" name="precio" th:field="*{precio}"/>
-                <br/><br/>       
-                <label for="existencias">Existencias:</label><br/>        
-                <input type="number" id="existencias" name="existencias" th:field="*{existencias}"/>
-                <br/><br/>           
-                <label for="activo">Activo:</label><br/>        
-                <input type="checkbox" id="activo" name="activo" th:field="*{activo}"/><br/>
-                <br/>            <input type="submit" name="Guardar" value="Guardar"/>   
+                <select th:field="*{idCategoria}">
+                    <option th:each="categoria: ${categoria}"
+                            th:value="${categoria.idCategoria}"
+                            th:text="${categoria.descripcion}"/>              
+                    </selet><br/>   
+                    <label for="descripcion">Descripcion:</label><br/>       
+                    <input type="text" id="descripcion" name="descripcion" th:field="*{descripcion}"/><br/>   
+                    <label for="detalle">Detalle:</label><br/>      
+                    <textarea name="detalle" th:field="*{detalle}" rows="6" cols="50"/><br/>
+                    <label for="precio">Precio:</label><br/>     
+                    <input type="number" name="precio" th:field="*{precio}"/><br/>   
+                    <label for="existencias">Existencias:</label><br/>        
+                    <input type="number" name="existencias" th:field="*{existencias}"/><br/>          
+                    <label for="activo">Activo:</label><br/>        
+                    <input type="checkbox" name="activo" th:field="*{activo}"/><br/>
+                    <input type="submit" name="guardar" value="Guardar"/>   
             </form>      
         </div>       
         <footer th:replace="layout/plantilla::footer"/>  
