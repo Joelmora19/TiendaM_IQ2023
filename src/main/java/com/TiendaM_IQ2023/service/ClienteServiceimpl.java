@@ -4,7 +4,6 @@ import com.TiendaM_IQ2023.dao.ClienteDao;
 import com.TiendaM_IQ2023.dao.CreditoDao;
 import com.TiendaM_IQ2023.domain.Credito;
 import com.TiendaM_IQ2023.domain.cliente;
-
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,5 +45,22 @@ public class ClienteServiceimpl implements ClienteService {
     public void delete(cliente cliente) {
         clienteDao.deleteById(cliente.getIdCliente());
     }
+
+//    @Override
+//    public List<cliente> getClientePorNombre(String nombre) {
+//       return clienteDao.findByNombre(nombre);
+//    }
+//
+//    @Override
+//    public List<cliente> getClientePorTelefono(String telefono) {
+//        return clienteDao.findByTelefono(telefono);
+//        
+//    }
+//    
+//    @Override
+//    public List<cliente> getClientePorNombreApellidos(String nombre, String Apellidos, String telefono) {
+//        return clienteDao.findByNombreOrApellidosTelefono(nombre, Apellidos, telefono);
+//        
+//    }
 
 }

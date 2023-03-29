@@ -1,4 +1,5 @@
 package com.TiendaM_IQ2023.controller;
+
 import com.TiendaM_IQ2023.domain.Articulo;
 import com.TiendaM_IQ2023.service.ArticuloService;
 import com.TiendaM_IQ2023.service.CategoriaService;
@@ -11,28 +12,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class ArticuloController {
-    
-     @Autowired
+
+    @Autowired
     ArticuloService articuloService;
 
-     
-     @Autowired
-     CategoriaService categoriaService;
-             
-             
+    @Autowired
+    CategoriaService categoriaService;
+
     @GetMapping("/articulo/listado")
     public String inicio(Model model) {
-      
+
         var articulos = articuloService.getArticulos(false);
         model.addAttribute("articulos", articulos);
-        
+
         return "/articulo/listado";
     }
 
     @GetMapping("/articulo/nuevo")
     public String nuevoArticulo(Articulo articulo, Model model) {
         var categorias = categoriaService.getCategorias(true);
-        model.addAttribute("categorias",categorias);
+        model.addAttribute("categorias", categorias);
         return "/articulo/modificar";
     }
 
@@ -41,18 +40,19 @@ public class ArticuloController {
         articuloService.save(articulo);
         return "redirect:/articulo/listado";
     }
-    
+
     @GetMapping("/articulo/modificar/{idArticulo}")
     public String modificarArticulo(Articulo articulo, Model model) {
-        articulo=articuloService.getArticulo(articulo);
+        articulo = articuloService.getArticulo(articulo);
         model.addAttribute("articulo", articulo);
         return "/articulo/modificar";
-    
+
     }
+
     @GetMapping("/articulo/eliminar/{idArticulo}")
-    public String eliminarArticulo(Articulo articulo){
+    public String eliminarArticulo(Articulo articulo) {
         articuloService.delete(articulo);
-            return "redirect:/articulo/listado";
+        return "redirect:/articulo/listado";
     }
-    
+
 }
