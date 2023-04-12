@@ -15,6 +15,13 @@
                     <div class="card-body">
                         <h5 class="card-title">[[${articulo.descripcion}]]</h5>
                         <h6 class="card-subtitle mb-2 text-muted text-end">¢[[${#numbers.formatDecimal(articulo.precio, 1, 'DEFAULT', 2, 'DEFAULT')}]]</h6>
+                        
+                        <figure>
+                            <figcaption>
+                                <img th:scr="@{$articulo.rutaImagen}" height="150" />
+                            </figcaption>
+                        </figure>
+                        
                         <a class="card-link" th:href="@{/carrito/agregar/} + ${articulo.idArticulo}">[[#{articulo.comprar}]]</a>
                         <p class="card-text">[[${articulo.detalle}]]</p>                        
                     </div>
